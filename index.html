@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/svg" href="{{ url_for('static', filename ='logo.png')}}">
+    <title>Aditya Gupta</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js"></script>
+    <!-- Link the CSS file correctly from the static folder -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <a href="#home" id="header-button">
+            <img src="{{ url_for('static', filename='logo3.png') }}" alt="Home Button" id="header-button-image"/>
+        </a>
+        <div class="menu-button" onclick="toggleDropdown()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+        <!-- Dropdown Menu -->
+        <div id="dropdown-menu" class="dropdown">
+            <a href="#exp">Experience</a>
+            <a href="#pub">Publications</a>
+            <a href="#int">Internships</a>
+            <a href="#pro">Projects</a>
+            <a href="#cv">CV</a>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- Upper Div -->
+        <div class="upper-div", id = "home">
+            <img src="{{ url_for('static', filename='mbrdi2.png') }}" alt="Landscape" class="landscape-img">
+        </div>
+
+        <!-- Circular Image in between -->
+        <div class="profile-pic">
+            <img src="{{ url_for('static', filename='me.png') }}" alt="Your Photo">
+        </div>
+
+        <!-- Lower Div -->
+        <div class="lower-div">
+            <h2>Aditya Gupta</h2>
+            <h3>Mercedes-Benz Research & Development India</h3>
+            <p>Hi! Aditya here. <br><br> I am an avid learner, a passionate researcher and a philomath. I have deep passion for AI/ML, data structures, mathematical optimizations and love to explore their novel use-cases. I work at Mercedes-Benz as a Research Engineer where my work is focused on the Intelligent cruise control (ICC) applications in an automobile. I've graduated from IIT Bombay with a major degree in Mechanical Engineering and a minor degree in Computer Science and Engineering. I have been fortunate to work under the wing of notable professors at IIT Bombay as an undergraduate researcher which has nurtured my interest into research-work. My internships at financial firms has allowed me to understand the significance of efficient algorithms and their eventual impact. <br><br> In my free time, one might catch me swaying to the rhythmic beats of soulful music or grilling out in the gym. <br><br> There is always a lot of scope to learn and implement our knowledge, and I am always focused towards delivering the best quality product. </p>
+            
+        </div>
+
+        <div class="expe" id="exp"> <!-- Internship Section -->
+            <h2>Experience</h2>
+            <p>Details about internships...</p>
+        </div>
+
+        <div class="publ" id="pub"> <!-- Experience Section -->
+            <h2>Publications</h2>
+            <p>Details about experience...</p>
+        </div>
+
+        <div class="inte" id="int"> <!-- Publications Section -->
+            <h2>Internships</h2>
+            <p>Details about publications...</p>
+        </div>
+
+        <div class="proj" id="pro"> <!-- Projects Section -->
+            <h2>Projects</h2>
+            <p>Details about projects...</p>
+        </div>
+
+        <div class="ceevee" id="cv"> <!-- CV Section -->
+            <h2>CV</h2>
+            <object data="{{ url_for('static', filename='CV.pdf') }}" type="application/pdf" width="100%" height="600px">
+                <p>Your browser does not support PDFs. <a href="{{ url_for('static', filename='CV.pdf') }}">Download the PDF</a>.</p>
+            </object>
+        </div>
+
+        
+    </main>
+
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Aditya Gupta | All Rights Reserved</p>
+    </footer>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
