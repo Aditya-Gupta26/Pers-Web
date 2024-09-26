@@ -13,6 +13,9 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-y: scroll; /* Enable scrolling */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
 }
 
 /* Header Styles */
@@ -137,7 +140,7 @@ main {
 /* Lower Div */
 .lower-div {
     width: 100%;
-    height: fi;
+    height: fit-content;
     background-color: #e2e2e2;
     display: flex;
     flex-direction: column;
@@ -158,7 +161,7 @@ main {
 
 .expe {
     width: 100%;
-    height: fi;
+    height: fit-content;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -171,7 +174,7 @@ main {
 
 .publ {
     width: 100%;
-    height: fi;
+    height: fit-content;
     background-color: #e2e2e2;
     display: flex;
     flex-direction: column;
@@ -184,7 +187,7 @@ main {
 
 .inte {
     width: 100%;
-    height: fi;
+    height: fit-content;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -197,7 +200,7 @@ main {
 
 .proj {
     width: 100%;
-    height: fi;
+    height: fit-content;
     background-color: #e2e2e2;
     display: flex;
     flex-direction: column;
@@ -210,7 +213,7 @@ main {
 
 .ceevee {
     width: 100%;
-    height: fi;
+    height: fit-content;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -229,6 +232,63 @@ footer {
     padding: 10px 0;
 }
 
+.par-div{
+    display: flex;
+    flex-direction: column;
+    height: fit-content; /* Full height of the viewport */
+    width: 100%;
+}
+
+.outer-div {
+    display: flex;
+    flex-direction: row;
+    height: fit-content; /* Full height of the viewport */
+    width: 100%;
+    padding: 10px;
+}
+
+/* Left and right inner divs */
+.inner-div {
+    display: flex;
+   
+    align-items: center;
+    padding: 10px;
+    color: #fff;
+}
+
+.left-div {
+    background-color: #e2e2e2;
+    width: 30%; /* 30% width for the left div */
+    padding:0px;
+}
+
+.right-div {
+    background-color: black;
+    width: 70%; /* 70% width for the right div */
+    display: flex;
+    flex-direction: column;
+    
+}
+.right-div h2{
+    margin-top: 30px;
+    color: white;
+}
+.right-div h3{
+    
+    color: white;
+}
+.right-div h4{
+    
+    color: white;
+}
+.right-div p{
+    color: white;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 #header-button-image {
     height: 40px; /* Adjust the size of the image as needed */
     cursor: pointer; /* Changes cursor to pointer on hover */
@@ -244,6 +304,26 @@ footer {
 html {
     scroll-behavior: smooth; /* Enables smooth scrolling */
 }
+
+.styled-button {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    margin: 20px;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .styled-button:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Slight background on hover */
+  }
+
+  .styled-button:focus {
+    outline: none; /* Remove focus outline */
+  }
 /* Responsive Styles */
 @media (max-width: 768px) {
     
@@ -269,5 +349,17 @@ html {
         text-align: center; /* Center text in the dropdown */
         padding: 15px; /* Add some padding for touch targets */
         border-bottom: 1px solid #575757; /* Optional: add a border for separation */
+    }
+
+    .outer-div {
+        flex-direction: column; /* Change to column layout */
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+    }
+
+    .left-div, .right-div {
+        width: 100%;  /* Full width for both divs */
+        height: fit-content; /* Each takes 50% of height */
     }
 }
